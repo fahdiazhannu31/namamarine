@@ -7,7 +7,7 @@ use CodeIgniter\Router\RouteCollection;
  */
 // $routes->get('/', 'Home::index');
 // $routes->get('/register', 'Home::register');
-$routes->get('/', 'Home::index', ['filter' => 'login']);
+$routes->get('/', 'Users::index', ['filter' => 'login']);
 $routes->get('/users', 'Users::index');
 $routes->get('/listpackage', 'Users::listpackage');
 $routes->get('/detailpackage', 'Users::detailpackage');

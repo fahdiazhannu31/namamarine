@@ -48,13 +48,26 @@
         <li><a class="nav-link" href="/faq">FAQ</a></li>
       </ul>
 
-      <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
-        <!-- <li><a class="nav-link" href="#"><img src="<?= base_url (); ?>/assets_users/images/user.svg"></a></li> -->
-        <!-- <li><a class="nav-link" href="cart.html"><img src="<?= base_url (); ?>/assets_users/images/cart.svg"></a></li> -->
+      <!-- User Profile Section -->
+      <ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5 d-flex align-items-center">
+        <li class="nav-item">
+          <!-- Profile Image and Username -->
+          <a class="nav-link d-flex align-items-center" href="#">
+            <img src="<?= base_url(); ?>/assets/img/<?= user()->user_image; ?>" alt="Profile Picture" class="rounded-circle" style="width: 40px; height: 40px; object-fit: cover;">
+            <span class="ms-3 text-black"><?= user()->username; ?></span> <!-- Replace $username with dynamic username -->
+          </a>
+        </li>
+        <li class="nav-item">
+          <!-- Logout Icon -->
+          <a class="nav-link" href="/logout">
+            <i class="fas fa-sign-out-alt text-danger"></i>
+          </a>
+        </li>
       </ul>
     </div>
   </div>
 </nav>
+
 
 <!-- End Header/Navigation -->
 
