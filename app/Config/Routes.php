@@ -5,10 +5,10 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-$routes->get('/', 'Home::index');
-$routes->get('/register', 'Home::register');
-// $routes->get('/', 'Home::index', ['filter' => 'login']);
-// $routes->get('/home', 'Home::index', ['filter' => 'login']);
+// $routes->get('/', 'Home::index');
+// $routes->get('/register', 'Home::register');
+$routes->get('/', 'Home::index', ['filter' => 'login']);
+$routes->get('/about', 'Home::index', ['filter' => 'login']);
 $routes->post('/payments', 'PaymentController::create');
 $routes->post('/payments/webhook/xendit', 'PaymentController::webhook');
 $routes->get('/api/routes', 'Route::getRoutes');
