@@ -42,7 +42,7 @@
 
     <div class="collapse navbar-collapse" id="navbarsFurni">
       <ul class="custom-navbar-nav navbar-nav ms-auto mb-2 mb-md-0">
-        <li><a class="nav-link" href="/users">Beranda</a></li>
+        <li><a class="nav-link" href="/">Beranda</a></li>
         <?php if (in_groups('users')) : ?>
         <li><a class="nav-link" href="/listpackage">Produk Kami</a></li>
         <?php endif; ?>
