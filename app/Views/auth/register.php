@@ -51,6 +51,24 @@
                                             placeholder="Last Name">
                                     </div>
                                 </div> -->
+                                <div class="form-group row">
+                                <div class="col-sm-6 mb-3 mb-sm-0">
+                                    <input 
+                                        type="text" 
+                                        class="form-control form-control-user <?php if (session('errors.fullname')) : ?>is-invalid<?php endif ?>" 
+                                        name="fullname"
+                                        placeholder="fullname" 
+                                        value="<?= old('fullname') ?>">
+                                </div>
+                                <div class="col-sm-6">
+                                    <input 
+                                        type="text" 
+                                        class="form-control form-control-user <?php if (session('errors.phone')) : ?>is-invalid<?php endif ?>" 
+                                        name="phone"
+                                        placeholder="phone" 
+                                        value="<?= old('phone') ?>">
+                                </div>
+                                </div>
                                 <div class="form-group">
                                     <input 
                                         type="text" 
