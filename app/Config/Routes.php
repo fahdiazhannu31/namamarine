@@ -12,6 +12,9 @@ $routes->get('/users', 'Users::index');
 $routes->get('/listpackage', 'Users::listpackage');
 $routes->get('/detailpackage', 'Users::detailpackage');
 $routes->get('/aboutus', 'Users::aboutus');
+
+$routes->get('/admin', 'Admin::index', ['filter' => 'login'], ['filter' => 'role:admin']);
+
 $routes->post('/payments', 'PaymentController::create');
 $routes->post('/payments/webhook/xendit', 'PaymentController::webhook');
 $routes->get('/api/routes', 'Route::getRoutes');
