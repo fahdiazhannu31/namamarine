@@ -22,6 +22,7 @@ $routes->group('', ['filter' => 'role:users'], function($routes) {
 // Grup routes untuk `Admin`
 $routes->group('', ['filter' => 'role:admin'], function($routes) {
     $routes->get('/admin', 'Admin::index');
+    $routes->get('/admin/(:num)', 'Admin::detailuser/$1');
     // $routes->get('/Admin/index', 'Admin::index');
 });
 
