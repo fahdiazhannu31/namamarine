@@ -6,10 +6,15 @@ use CodeIgniter\Router\RouteCollection;
  * @var RouteCollection $routes
  */
 
+// Routes untuk halaman yang hanya bisa diakses oleh pengguna yang belum login
+$routes->group('', ['filter' => 'noauth'], function($routes) {
+    $routes->get('/', 'Users::indexnonlogin');
+    $routes->get('/aboutus.', 'Users::aboutusnonlogin');
+});
 
 // Route untuk halaman utama
 $routes->group('', ['filter' => 'login'], function($routes) {
-    $routes->get('/', 'Users::index'); 
+    $routes->get('/home', 'Users::index'); 
     $routes->get('/aboutus', 'Users::aboutus');
 });
 
